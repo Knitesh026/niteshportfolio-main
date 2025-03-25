@@ -1,10 +1,10 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Github, Instagram, Linkedin, Mail, Send, Twitter } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const { toast } = useToast();
@@ -38,16 +38,38 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const form = e.target as HTMLFormElement;
+      const templateParams = {
+        from_name: (form.elements.namedItem("name") as HTMLInputElement).value,
+        from_email: form.email.value,
+        subject: form.subject.value,
+        message: form.message.value,
+        to_email: 'kr.nitesh026@gmail.com, kr.nitesh656@gmail.com'
+      };
 
-    toast({
-      title: "Message sent successfully!",
-      description: "I'll get back to you as soon as possible.",
-    });
+      await emailjs.send(
+        'service_05roz21', // Replace with your EmailJS service ID
+        'template_wmzu1g8', // Replace with your EmailJS template ID
+        templateParams,
+        'ai1g2C0xWp69MtQvY' // Replace with your EmailJS public key
+      );
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      toast({
+        title: "Message sent successfully!",
+        description: "I'll get back to you as soon as possible.",
+      });
+
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [

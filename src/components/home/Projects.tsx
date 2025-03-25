@@ -14,8 +14,8 @@ const projects = [
     description: "A modern, accessible web interface with advanced filtering and cart functionality",
     image: "/images/frontend-development.png",
     tags: ["React", "Tailwind CSS", "Redux", "API Integration"],
-    demoUrl: "#",
-    repoUrl: "#",
+    demoUrl: "https://preview--pagecraftweb.lovable.app/",
+    repoUrl: "https://github.com/Knitesh026/pagecraftweb.git",
     category: "frontend" as ProjectCategory
   },
   {
@@ -34,8 +34,8 @@ const projects = [
     description: "A web app that helps professionals create stunning portfolio websites without coding",
     image: "/images/jk.png",
     tags: ["JavaScript", "Vue.js", "Firebase", "Templates"],
-    demoUrl: "#",
-    repoUrl: "#",
+    demoUrl: "https://preview--niteshp01.lovable.app/",
+    repoUrl: "https://github.com/Knitesh026/niteshp01.git",
     category: "frontend" as ProjectCategory
   },
   {
@@ -54,8 +54,8 @@ const projects = [
     description: "A comprehensive admin dashboard for SaaS applications with analytics and user management",
     image: "/images/DBM.png",
     tags: ["React", "Chart.js", "Node.js", "MongoDB"],
-    demoUrl: "#",
-    repoUrl: "#",
+    demoUrl: "https://preview--downloadbuddydm.lovable.app/",
+    repoUrl: "https://github.com/Knitesh026/downloadbuddydm.git",
     category: "frontend" as ProjectCategory
   },
   {
