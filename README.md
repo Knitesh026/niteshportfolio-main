@@ -3,7 +3,7 @@
 ## Project info
 This project has been developed by Nitesh Kumar. The project is currently undergoing modifications and upgrades to enhance its functionality and performance. Please note that this is not the final version, and further improvements are in progress. For a preview of the project, please refer to the link provided below.
 
-**URL**:  https://preview--niteshportfolio.lovable.app/
+**URL**: https://niteshkumar656.netlify.app/
 
 ## What technologies are used for this project?
 
