@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -76,23 +75,37 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         
         <div className="flex gap-3 mt-auto">
           {demoUrl && (
-            <Button 
-              size="sm" 
-              className="rounded-md flex items-center gap-1.5 transition-all"
+            <a 
+              href={demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1.5"
             >
-              <ExternalLink size={16} />
-              <span>Live Demo</span>
-            </Button>
+              <Button 
+                size="sm" 
+                className="rounded-md flex items-center gap-1.5 transition-all"
+              >
+                <ExternalLink size={16} />
+                <span>Live Demo</span>
+              </Button>
+            </a>
           )}
           {repoUrl && (
-            <Button 
-              size="sm" 
-              variant="outline" 
-              className="rounded-md flex items-center gap-1.5 transition-all"
+            <a 
+              href={repoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1.5"
             >
-              <Github size={16} />
-              <span>Code</span>
-            </Button>
+              <Button 
+                size="sm" 
+                variant="outline" 
+                className="rounded-md flex items-center gap-1.5 transition-all"
+              >
+                <Github size={16} />
+                <span>Code</span>
+              </Button>
+            </a>
           )}
         </div>
       </div>
