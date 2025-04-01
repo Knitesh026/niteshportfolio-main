@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import AnimatedBackground from "@/components/ui/AnimatedBackground";
 import { ArrowDown, BadgeCheck } from "lucide-react";
@@ -92,9 +91,10 @@ export default function Hero() {
             {/* User avatar with updated size from 72x72 to 64x64 */}
             <Avatar className="h-72 w-72 border-4 border-primary/20 shadow-xl animate-float mt-10">
               <AvatarImage 
-                src="/images/Connect1.png" 
+                src="/images/Connect1.webp" 
                 alt="Nitesh Kumar" 
                 className="object-cover"
+                loading="lazy" /* Added lazy loading */
               />
               <AvatarFallback className="text-6xl bg-muted">NK</AvatarFallback>
             </Avatar>

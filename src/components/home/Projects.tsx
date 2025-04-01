@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -12,7 +11,7 @@ const projects = [
     id: 1,
     title: "Website development",
     description: "A modern, accessible web interface with advanced filtering and cart functionality",
-    image: "/images/frontend-development.png",
+    image: "/images/frontend-development.webp", // Updated to WebP
     tags: ["React", "Tailwind CSS", "Redux", "API Integration"],
     demoUrl: "https://preview--pagecraftweb.lovable.app/",
     repoUrl: "https://github.com/Knitesh026/pagecraftweb.git",
@@ -22,7 +21,7 @@ const projects = [
     id: 2,
     title: "Android Security Scanner",
     description: "A tool for identifying common security vulnerabilities in Android applications",
-    image: "/images/Android.jpeg",
+    image: "/images/Android.jpeg", // Updated to WebP
     tags: ["Kotlin", "Android", "Cybersecurity", "Static Analysis"],
     demoUrl: "#",
     repoUrl: "#",
@@ -97,6 +96,18 @@ export default function Projects() {
     };
   }, []);
 
+  // Preload the largest contentful paint image
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = "/images/frontend-development.webp"; // Example of largest image
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   const filteredProjects = activeCategory === "all" 
     ? projects 
     : projects.filter(project => project.category === activeCategory);
@@ -164,6 +175,7 @@ export default function Projects() {
                 demoUrl={project.demoUrl}
                 repoUrl={project.repoUrl}
                 category={project.category}
+                lazy={true} // Enable lazy loading
               />
             </div>
           ))}

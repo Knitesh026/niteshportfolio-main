@@ -47,7 +47,7 @@ export default function About() {
                 <div className="w-4/5 h-4/5 rounded-2xl overflow-hidden glass shadow-lg">
                   <div className="w-full h-full">
                     <img 
-                      src="/images/Connect.png" 
+                      src="/images/Connect (1).webp" 
                       alt="Nitesh Kumar" 
                       className="w-full h-full object-cover"
                     />

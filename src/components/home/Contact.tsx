@@ -102,6 +102,19 @@ export default function Contact() {
       icon: <Mail className="h-5 w-5" />, 
       url: "mailto:kr.nitesh656@gmail.com,kr.nitesh026@gmail.com",
       color: "hover:text-red-500 dark:hover:text-red-400"
+    },
+    {
+      name: "Buy Me a Coffee",
+      icon: (
+        <img
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+          alt="Buy Me A Coffee"
+          width="24"
+          className="inline-block"
+        />
+      ),
+      url: "https://buymeacoffee.com/krnitesh02h",
+      color: "hover:opacity-80"
     }
   ];
 
