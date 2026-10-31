@@ -1,55 +1,76 @@
-# Welcome to project - Portfolio
+# Nitesh Kumar: Portfolio (Main)
 
-## Project info
-This project has been developed by Nitesh Kumar. The project is currently undergoing modifications and upgrades to enhance its functionality and performance. Please note that this is not the final version, and further improvements are in progress. For a preview of the project, please refer to the link provided below.
+> A personal developer portfolio with animated backgrounds and a dark/light theme.
 
-**URL**: https://niteshkumar656.netlify.app/
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss&logoColor=white)
 
-## What technologies are used for this project?
+## Overview
 
-This project is built with .
+Personal portfolio of Nitesh Kumar showing about, skills, projects and a contact form. The site is a work in progress and is improved regularly.
 
-- HTML
-- CSS
-- JS
-- shadcn-ui
-- Tailwind CSS
+**Live site:** https://niteshkumar656.netlify.app/
 
-# Project Setup
+## Features
 
-## Fixing Vite Issues
+- Hero, About, Skills, Projects and Contact sections
+- Animated background and theme toggle
+- Contact form delivered through EmailJS
+- Reusable project and skill cards
 
-If you encounter issues with the `vite` module, follow these steps:
+## Tech stack
 
-1. Delete `node_modules` and `package-lock.json`:
-   ```bash
-   rm -rf node_modules package-lock.json
-   ```
+| Layer | Technology |
+|-------|------------|
+| Framework | React 18, TypeScript, Vite |
+| Styling | Tailwind CSS, shadcn/ui (Radix UI) |
+| Routing | React Router |
+| Email | EmailJS (`@emailjs/browser`) |
 
-2. Reinstall dependencies:
-   ```bash
-   npm install
-   ```
+## Getting started
 
-3. Ensure `vite` is installed as a dev dependency:
-   ```bash
-   npm install vite --save-dev
-   ```
+### Prerequisites
 
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
+- Node.js 18 or later
+- npm (or pnpm/bun)
 
-5. Verify your Node.js version is compatible (16.x or 18.x recommended):
-   ```bash
-   node -v
-   ```
+### Install and run
 
-6. Clear npm cache if issues persist:
-   ```bash
-   npm cache clean --force
-   npm install
-   ```
+```bash
+git clone https://github.com/Knitesh026/niteshportfolio-main.git
+cd niteshportfolio-main
+npm install
+npm run dev
+```
 
-For further assistance, refer to the Vite documentation or contact the project maintainer.
+The app runs at `http://localhost:5173` by default.
+
+### Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Lint the code |
+
+## Project structure
+
+```
+src/
+├── components/
+│   ├── home/        Hero, About, Skills, Projects, Contact
+│   ├── layout/      Navbar, Footer
+│   └── ui/          shadcn primitives, ProjectCard, SkillCard, ThemeToggle
+└── pages/
+```
+
+## Deployment
+
+Build with `npm run build` and deploy the output to any static or Node host such as Netlify or Vercel.
+
+## License
+
+All rights reserved.
